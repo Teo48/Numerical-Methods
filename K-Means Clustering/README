@@ -1,0 +1,42 @@
+Teodor Matei 313 CA - 2019
+ _   _____  ___ _____  ___   _   _  _____ 
+| | / /|  \/  ||  ___|/ _ \ | \ | |/  ___|
+| |/ / | .  . || |__ / /_\ \|  \| |\ `--. 
+|    \ | |\/| ||  __||  _  || . ` | `--. \
+| |\  \| |  | || |___| | | || |\  |/\__/ /
+\_| \_/\_|  |_/\____/\_| |_/\_| \_/\____/ 
+                                          
+Implementarea temei a constat in rezolvarea urmatoarelor task-uri:
+
+1. Task-ul 1 consta in citirea numarului de clustere si a punctelor
+pe care dorim sa le separam in clustere.
+
+2. Task-ul 2 - algoritmul KMEANS. Am ales random un set de centroizi,
+un vector de asignare(sa stiu fiecare punct carui cluster apartine),
+am calculat distanta de la fiecare punct la fiecare centroid si in 
+momentul in care am gasit distanta cea mai mica inseamna ca punctul
+apartine acelui cluster si am maracat numarul clusterului in vectorul
+de asignare. Calculez noii centroizi (centrele de masa ale clusterlor)
+si verific daca distanta dintre actualii si cei de la iteratia anterioara
+converge la 0. Daca da, atunci algoritmul se incheie, daca nu continui
+cautarea.
+
+3. Task-ul 3 - reprezentarea grafica a clusterlor. Imi creez o matrice 
+de culori RANDOM in functie de numarul de clustere.Parcurg punctele si 
+in functie de clusterul in care au fost asignate, imi creez un vector 
+ce retine culorile pentru fiecare.
+
+4. Task-ul 4 - costul total al clusterlor. Imi creez un matrice 3D in 
+care stochez pe nivele punctele din fiecare cluster. Nivelul 1 va contine
+toate punctele ce apartin clusterului 1, nivelul 2 va continte toate 
+punctele ce apartin clusterului 2 si tot asa. Imi creez un vector costs 
+ce va contine costul fiecarui cluster. Calculez pe fiecare nivel distanta 
+de la fiecare punct la centroidul corespunzator si o adun la costs.
+La final, costul total va fi suma tuturor costurilor.
+
+5. Task-ul 5 - trasarea graficului de costuri in functie de numarul 
+de clustere. Calculez costul in fiecare caz(cand am un cluster, doua...
+pana la zece.) si il retin, iar apoi trasez graficul.
+
+Feedback: Foarte interesant algoritmul de KMeans si din ce am citit ar fi un
+prim pas pentru noi in ML which is cool. Keep up the good work! 
